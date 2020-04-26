@@ -1,0 +1,13 @@
+body{
+    background-color: blue;
+    font-size: 18px;
+}
+.para{
+    color: crimson;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#graphe{
+    color: rgb(255,100,20);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
