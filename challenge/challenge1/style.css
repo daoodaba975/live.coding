@@ -12,7 +12,7 @@
     width: 50%;
     height: 100%;
     float: left;
-    background-image: url('thumbnail.jpg');
+    background-image: url('img/thumbnail.jpg');
     background-repeat: no-repeat;
     background-size: auto;
 }
