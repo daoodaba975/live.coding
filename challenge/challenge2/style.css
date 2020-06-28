@@ -1,61 +1,73 @@
+/*===IMPORT FONT===*/
+/* We add here the font style we want to use*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
 
+/*===RESETS===*/
+/* We define here some default styles to the html tags*/
 body {
   background: #eee;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   text-align: center;
-  margin: 40px 0;
+  color: #707070;
+  width: 1200px;
+  max-width: 80%;
+  margin: 40px auto;
 }
 
+/*===TYPOGRAPHY===*/
+/* In here we define the rules we want to apply to the h1, p, span tags*/
 .title {
   font-weight: 900;
   font-size: 60px;
   margin: 10px 0 20px;
-  color: #707070;
 }
 
 .name {
   font-weight: 500;
-  color: #707070;
   margin: 0;
-}
-
-p {
-  color: #707070;
 }
 
 .sub-title {
   width: 900px;
-  max-width: 70%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-.cards {
-  width: 1300px;
-  max-width: 80%;
-  margin: 100px auto 20px;
+.desc {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.role {
+  opacity: .5;
+}
+
+/*===CARD STYLES===*/
+/* This part contains the styles relative to the cards component*/
+
+/* First we set a container around all the cards so that we can set the width, display ... */
+.container {
+  width: 100%;
+  margin: 100px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Now for each card we determine the width by using the calc function */
 .card {
-  width: 350px;
+  width: calc(75% / 3);
   background: #fff;
   border-radius: 10px;
   position: relative;
-  padding: 60px 20px 20px 20px;
+  padding: 60px 30px 30px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   top: 0;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.card:hover {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  top: -5px;
-}
-
+/* For the card-img we use a 'position: absolute' for positionning it absolute inside the card */
 .card-img {
   width: 100px;
   height: 100px;
@@ -66,27 +78,26 @@ p {
   transform: translateX(-50%);
 }
 
-.desc {
-  margin-bottom: 0;
+/* And finally we add some animation to each when we hover */
+.card:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  top: -5px;
 }
 
-.role {
-  color: #707070;
-  opacity: .5;
-}
-
-/*===Breakpoints===*/
-@media (max-width: 700px) {
+/*===MEDIA QUERY===*/
+/* We define here the rules we want to apply when the viewport's width is less than 900px */
+@media (max-width: 900px) {
+  /* The alignement is set vertically*/
   .cards {
     flex-direction: column;
   }
-
+  /* We tweak some rules for every single card*/
   .card {
     width: 100%;
-    padding: 60px 10px 10px 10px;
+    padding: 60px 15px 20px;
     margin-bottom: 100px;
   }
-
+  /* We decrease the font size */
   .title {
     font-size: 40px;
   }
